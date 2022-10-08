@@ -3,3 +3,5 @@
 3. https://www.youtube.com/watch?v=-L-WgKMFuhE  Sebastian Lague, A* Explained
 4. https://www.youtube.com/watch?v=X-iSQQgOd1A  Sebastion Lague, Slime Simulations/Ant Simulations for PathFinding in an Esoteric Way
 5. https://www.youtube.com/watch?v=X3x7BlLgS-4  Dane Perry Svendsen, Algorythms Comparison
+6. https://www.youtube.com/watch?v=6kv5HKPB1XU  Turbo_Egg, MazeGeneration Algorythms
+7. https://www.youtube.com/watch?v=rop0W4QDOUI  Computerphile, einen Lösungsansatz erklärt + ein paar Optimierungen

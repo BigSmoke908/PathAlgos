@@ -2,3 +2,4 @@ Algorithmen
 Implementierung
 Visualierung
 MazeGeneration
+das Maze optimieren -> in einen Graphen umwandeln, Betrachten für welche Algorythmen/welche MazeGenerator das sinnvoll ist (in Quelle 7 durchgeführt)

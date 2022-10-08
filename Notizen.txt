@@ -4,8 +4,18 @@ Algorithmen:
 - Dijkstra
 - A-Star
 - Breadth First Search Algorythm
+- DepthFirst
 
 - Ameisen Path-Finding Algo Quelle 4
 
 
 Heuristic -> laut Quelle 3 ~distance from end node
+
+
+MaceGenerators (Quelle 6):
+- Recursive Backtracking Algorithm
+- Hunt and Kill Algorithm
+- Ellers Algorithm
+- Sidewinder Algorithm
+- Prims Algorithm
+- Kruskals Algorithm
