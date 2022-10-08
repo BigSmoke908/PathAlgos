@@ -1,0 +1,11 @@
+Algorithmen:
+- DFS
+- BFS
+- Dijkstra
+- A-Star
+- Breadth First Search Algorythm
+
+- Ameisen Path-Finding Algo Quelle 4
+
+
+Heuristic -> laut Quelle 3 ~distance from end node
