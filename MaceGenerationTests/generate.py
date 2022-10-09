@@ -1,3 +1,4 @@
+import json
 import random
 from PIL import Image
 # script for trying out algorithms in Maze Generation (i'll probably port it to Rust later)
@@ -22,28 +23,28 @@ class Maze:
         self.wall = w
         self.corridor = c
         self.pixel = s  # number of pixels for one square in the maze (needed for turning the maze into a picture)
-        self.maze = [[self.wall for i in range(2 * y - 1)] for j in range(2 * x - 1)]
         # has the number of "real" points that we want
+        self.maze = [[self.wall for i in range(2 * x - 1)] for j in range(2 * y - 1)]
 
-    # returns true if the spot is a wall, false if the spot is a corridor or not in the maze
+    # checks, if you can go to a certain point
     def p(self, x, y):
-        if x * 2 in range(len(self.maze)) and y * 2 in range(len(self.maze[0])):
-            return self.maze[2 * x][2 * y] == self.wall
+        if y * 2 in range(len(self.maze)) and x * 2 in range(len(self.maze[0])):
+            return self.maze[2 * y][2 * x] == self.wall
         return False
 
     # sets the value of a real point
     def s(self, x, y, val=None):
         if val is None:
             val = self.corridor
-        self.maze[2 * x][2 * y] = val
+        self.maze[2 * y][2 * x] = val
 
     # connects 2 points -> sets them and the connection in between to a value
     def c(self, x1, y1, x2, y2, val=None):
         if val is None:
             val = self.corridor
-        self.maze[x1 * 2][y1 * 2] = val
-        self.maze[x2 * 2][y2 * 2] = val
-        self.maze[x1 + x2][y1 + y2] = val
+        self.maze[y1 * 2][x1 * 2] = val
+        self.maze[y2 * 2][x2 * 2] = val
+        self.maze[y1 + y2][x1 + x2] = val
 
     def printMaze(self):
         print('---')
@@ -63,19 +64,27 @@ class Maze:
                     for j in range(s):
                         if self.maze[row][pixel] == self.corridor:
                             data.append((255, 255, 255))
-                        else:
+                        elif self.maze[row][pixel] == self.wall:
                             data.append((0, 0, 0))
+                        else:
+                            data.append((255, 0, 0))
         img.putdata(data)
         img.save(file)
 
+    def save(self, file):
+        open(file, 'w').write(json.dumps(self.maze))
+
+    def load(self, file):
+        self.maze = json.loads(open(file).read())
+
 
 # https://weblog.jamisbuck.org/2011/1/10/maze-generation-prim-s-algorithm (zuletzt besucht 9.10.2022, 11:03)
-def primsalgoMace(x, y):
+def generate(x, y):
     maze = Maze(x, y)
     # Coordinates of already visited points, the first one is the starting point
-    visited = [[random.randrange(x), random.randrange(y)]]
-    counter = 0
-    while len(visited) != x * y:  # as long as there are points not part of the mace
+    # visited = [[random.randrange(y), random.randrange(x)]]
+    visited = [[0, 0]]
+    while len(visited) != x * y:  # as long as there are points, which are not part of the mace
         pointer = visited[random.randrange(len(visited))]
         n = []  # neighbours for that pointer
         # point has to be in the maze, not already a connected, and not the pointer itself to be a neighbour
@@ -94,13 +103,11 @@ def primsalgoMace(x, y):
         neighbour = n[random.randrange(len(n))]  # the one we are connecting
         maze.c(*pointer, *neighbour)
         visited.append(neighbour)
-        # if counter % 100 == 0:
-        maze.picture('archive/' + str(counter) + '.png')
-        counter += 1
     return maze
 
 
-maze = primsalgoMace(50, 50)
-maze.printMaze()
-# maze.picture('final.png')
-maze.picture('archive/2500.png')
+if __name__ == '__main__':
+    maze = generate(30, 30)
+    maze.printMaze()
+    maze.picture('maze.png')
+    maze.save('maze.json')
