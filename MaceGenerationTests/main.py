@@ -1,4 +1,5 @@
 import random
+from PIL import Image
 # script for trying out algorithms in Maze Generation (i'll probably port it to Rust later)
 
 
@@ -16,10 +17,11 @@ class Maze:
     q -> Possible Connection between 2 points in the maze
       -> cant be either, just always wall
     '''
-    def __init__(self, x, y, w=0, c=1):
+    def __init__(self, x, y, w=0, c=1, s=10):
         # values for walkable/non-walkable spaces
         self.wall = w
         self.corridor = c
+        self.pixel = s  # number of pixels for one square in the maze (needed for turning the maze into a picture)
         self.maze = [[self.wall for i in range(2 * y - 1)] for j in range(2 * x - 1)]
         # has the number of "real" points that we want
 
@@ -49,12 +51,30 @@ class Maze:
             print(''.join([str(val) + ' ' for val in row]))
         print('---')
 
+    def picture(self, file, s=None):
+        if s is None:
+            s = self.pixel
+        img = Image.new(mode="RGB", size=(len(self.maze) * s, len(self.maze[0]) * s))
+
+        data = []
+        for row in range(len(self.maze)):
+            for i in range(s):
+                for pixel in range(len(self.maze[row])):
+                    for j in range(s):
+                        if self.maze[row][pixel] == self.corridor:
+                            data.append((255, 255, 255))
+                        else:
+                            data.append((0, 0, 0))
+        img.putdata(data)
+        img.save(file)
+
 
 # https://weblog.jamisbuck.org/2011/1/10/maze-generation-prim-s-algorithm (zuletzt besucht 9.10.2022, 11:03)
 def primsalgoMace(x, y):
     maze = Maze(x, y)
     # Coordinates of already visited points, the first one is the starting point
     visited = [[random.randrange(x), random.randrange(y)]]
+    counter = 0
     while len(visited) != x * y:  # as long as there are points not part of the mace
         pointer = visited[random.randrange(len(visited))]
         n = []  # neighbours for that pointer
@@ -74,7 +94,13 @@ def primsalgoMace(x, y):
         neighbour = n[random.randrange(len(n))]  # the one we are connecting
         maze.c(*pointer, *neighbour)
         visited.append(neighbour)
+        # if counter % 100 == 0:
+        maze.picture('archive/' + str(counter) + '.png')
+        counter += 1
     return maze
 
 
-primsalgoMace(5, 5).printMaze()
+maze = primsalgoMace(50, 50)
+maze.printMaze()
+# maze.picture('final.png')
+maze.picture('archive/2500.png')
