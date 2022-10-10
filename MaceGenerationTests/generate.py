@@ -107,7 +107,6 @@ def generate(x, y):
 
 
 if __name__ == '__main__':
-    maze = generate(30, 30)
-    maze.printMaze()
+    maze = generate(3, 3)
     maze.picture('maze.png')
     maze.save('maze.json')

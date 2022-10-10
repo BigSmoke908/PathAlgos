@@ -1,14 +1,17 @@
 import math
 from generate import Maze
-import random
+import time
 
 
 class Solver:
     def __init__(self, m):
         self.maze = m
 
+    # better than pythagorean distance, because its not rounded (gerunded?), results can be wrong otherwise
     def dist(self, x1, y1, x2, y2):
-        return int(math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2) * 10)
+        dx = abs(x1 - x2)
+        dy = abs(y1 - y2)
+        return 14 * min(dx, dy) + max(dx, dy) * 10
 
     def astar(self, source, destination):
         wrongsource = source[0] not in range(len(self.maze[0])) or source[1] not in range(len(self.maze))
@@ -70,6 +73,7 @@ class Solver:
         return path
 
 
+begin = time.time()
 storage = Maze(5, 5)
 storage.load('maze.json')
 maze = storage.maze
@@ -81,3 +85,4 @@ for point in PATH:
 storage.maze[0][0] = 2
 storage.maze[dest[1]][dest[0]] = 2
 storage.picture('solved.png')
+print(time.time() - begin)
