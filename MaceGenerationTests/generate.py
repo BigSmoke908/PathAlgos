@@ -1,7 +1,7 @@
 import json
 import random
 from PIL import Image
-# script for trying out algorithms in Maze Generation (i'll probably port it to Rust later)
+import time
 
 
 # is storing a Maze, we can call it as if the maze is walls of 0 width, does all the changing of it for us
@@ -18,10 +18,12 @@ class Maze:
     q -> Possible Connection between 2 points in the maze
       -> cant be either, just always wall
     '''
-    def __init__(self, x, y, w=0, c=1, s=10):
+    def __init__(self, x, y, w=0, c=1, searched=2, path=3, s=10):
         # values for walkable/non-walkable spaces
         self.wall = w
         self.corridor = c
+        self.searched = searched
+        self.path = path
         self.pixel = s  # number of pixels for one square in the maze (needed for turning the maze into a picture)
         # has the number of "real" points that we want
         self.maze = [[self.wall for i in range(2 * x - 1)] for j in range(2 * y - 1)]
@@ -55,7 +57,7 @@ class Maze:
     def picture(self, file, s=None):
         if s is None:
             s = self.pixel
-        img = Image.new(mode="RGB", size=(len(self.maze) * s, len(self.maze[0]) * s))
+        img = Image.new(mode="RGB", size=(len(self.maze[0]) * s, len(self.maze) * s))
 
         data = []
         for row in range(len(self.maze)):
@@ -66,8 +68,12 @@ class Maze:
                             data.append((255, 255, 255))
                         elif self.maze[row][pixel] == self.wall:
                             data.append((0, 0, 0))
-                        else:
+                        elif self.maze[row][pixel] == self.searched:
+                            data.append((255, 255, 0))
+                        elif self.maze[row][pixel] == self.path:
                             data.append((255, 0, 0))
+                        else:
+                            data.append((0, 0, 255))
         img.putdata(data)
         img.save(file)
 
@@ -82,9 +88,9 @@ class Maze:
 def generate(x, y):
     maze = Maze(x, y)
     # Coordinates of already visited points, the first one is the starting point
-    # visited = [[random.randrange(y), random.randrange(x)]]
-    visited = [[0, 0]]
-    while len(visited) != x * y:  # as long as there are points, which are not part of the mace
+    visited = [[random.randrange(y), random.randrange(x)]]
+    removed = 0
+    while len(visited) + removed != x * y:  # as long as there are points, which are not part of the mace
         pointer = visited[random.randrange(len(visited))]
         n = []  # neighbours for that pointer
         # point has to be in the maze, not already a connected, and not the pointer itself to be a neighbour
@@ -100,6 +106,10 @@ def generate(x, y):
         if len(n) == 0:  # no available neighbours at that point
             continue
 
+        if len(n) == 1:  # this already is its last neighbour -> we not checking this point again will increase performance
+            visited.remove(pointer)
+            removed += 1
+
         neighbour = n[random.randrange(len(n))]  # the one we are connecting
         maze.c(*pointer, *neighbour)
         visited.append(neighbour)
@@ -107,6 +117,8 @@ def generate(x, y):
 
 
 if __name__ == '__main__':
-    maze = generate(3, 3)
+    begin = time.time()
+    maze = generate(50, 25)
     maze.picture('maze.png')
     maze.save('maze.json')
+    print(time.time() - begin)

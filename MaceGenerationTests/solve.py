@@ -1,4 +1,5 @@
 import math
+import random
 from generate import Maze
 import time
 
@@ -59,7 +60,6 @@ class Solver:
         path = []
         while pointer != source:
             path.append(pointer)
-
             npointer = [0, 0, float('inf')]
             # find the neighbour with the lowest value
             for i in range(-1, 2):
@@ -67,8 +67,9 @@ class Solver:
                     if i != 0 or j != 0:
                         n = [pointer[0] + i, pointer[1] + j]
                         if n[0] in range(len(costmap[0])) and n[1] in range(len(costmap)) and n not in path:
-                            if costmap[n[1]][n[0]] + self.dist(*n, *pointer) < npointer[2]:
-                                npointer = [n[0], n[1], costmap[n[1]][n[0]]]
+                            cost = costmap[n[1]][n[0]] + self.dist(*n, *pointer)  # cost to get to that point
+                            if cost < npointer[2]:
+                                npointer = [n[0], n[1], cost]
             pointer = [npointer[0], npointer[1]]
         return path
 
@@ -78,11 +79,12 @@ storage = Maze(5, 5)
 storage.load('maze.json')
 maze = storage.maze
 solver = Solver(maze)
-dest = [58, 58]
-PATH = solver.astar([0, 0], dest)
+source = [98, 0]
+dest = [8, 18]
+PATH = solver.astar(source, dest)
 for point in PATH:
-    storage.maze[point[1]][point[0]] = 2
-storage.maze[0][0] = 2
+    storage.maze[point[1]][point[0]] = 3
+storage.maze[source[1]][source[0]] = 2
 storage.maze[dest[1]][dest[0]] = 2
 storage.picture('solved.png')
 print(time.time() - begin)
