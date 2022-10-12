@@ -118,7 +118,7 @@ def generate(x, y):
 
 if __name__ == '__main__':
     begin = time.time()
-    maze = generate(50, 25)
+    maze = generate(200, 200)
     maze.picture('maze.png')
     maze.save('maze.json')
     print(time.time() - begin)
