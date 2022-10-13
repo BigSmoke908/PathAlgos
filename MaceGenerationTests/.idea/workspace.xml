@@ -2,11 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b028e59-bf0b-4c68-8ec6-91eb53326980" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maze.json" beforeDir="false" afterPath="$PROJECT_DIR$/maze.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maze.png" beforeDir="false" afterPath="$PROJECT_DIR$/maze.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rustsolver/mazes/test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solve.py" beforeDir="false" afterPath="$PROJECT_DIR$/solve.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solved.png" beforeDir="false" afterPath="$PROJECT_DIR$/solved.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../rustsolver/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/.fingerprint/rustsolver-dcd5c31b34464e46/bin-rustsolver" beforeDir="false" afterPath="$PROJECT_DIR$/../rustsolver/target/debug/.fingerprint/rustsolver-dcd5c31b34464e46/bin-rustsolver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/.fingerprint/rustsolver-dcd5c31b34464e46/output-bin-rustsolver" beforeDir="false" afterPath="$PROJECT_DIR$/../rustsolver/target/debug/.fingerprint/rustsolver-dcd5c31b34464e46/output-bin-rustsolver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/deps/rustsolver-dcd5c31b34464e46" beforeDir="false" afterPath="$PROJECT_DIR$/../rustsolver/target/debug/deps/rustsolver-dcd5c31b34464e46" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/115i9h61woh76rhm.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/134sifpt6pww6vk3.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/1355b9q2ibgxdkvj.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/14190waacgykt3yd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/14myv80v0uky8kgs.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/1560p5cfjn91z0ms.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/16xaqlbj5afy34bt.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/1cu8wmfl2sbl7xox.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/1pgz50ei6yqo40ma.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/1x17k711vvcyh1f8.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/1x8wog438pdmvi3r.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/20aksgoo018frv2o.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/2ge3n7tkd36b868a.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/2mf5ljtg88096tou.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/2myug5dl3q4zkzqo.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/2nuscj303blwu1hy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/392r70tnsd4hw9yv.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/3b2tnroxxb9pt2nl.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/3glzopqo6ihuwonk.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/3ks3e21d5hnb6gek.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/3si6mjrr6ysdb85j.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/40163ayuc6y3hf0b.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/4h8b3ijqe654np6q.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/4poi367rv2mm77sp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/4tiobya3x6ov1am0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/4we3n17z4t6wmeaj.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/5fhgt8vrr4k42b29.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/nrt104jwfuvj1lj.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/o8xm8e22wgjjpa3.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/oj9l44dx6gpoyju.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/rs2mj8f04zybiw4.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/sea831z849f2jk.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/t0xwnezkop2rw2k.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/u9zuh3kk4105pv3.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du-1cg2nskinm3g8/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/incremental/rustsolver-82kaghmlhq72/s-ged2wrk49y-1ah24du.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rustsolver/target/debug/rustsolver" beforeDir="false" afterPath="$PROJECT_DIR$/../rustsolver/target/debug/rustsolver" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

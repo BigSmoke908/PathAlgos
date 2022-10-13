@@ -30,7 +30,7 @@ class Solver:
         dy = abs(y1 - y2)
         return 14 * min(dx, dy) + max(dx, dy) * 10
 
-    def astar(self, source, destination):
+    def astar(self, source, destination):1
         self.check_args(source, destination)
 
         # cost to reach a tile
