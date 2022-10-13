@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b028e59-bf0b-4c68-8ec6-91eb53326980" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maze.json" beforeDir="false" afterPath="$PROJECT_DIR$/maze.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maze.png" beforeDir="false" afterPath="$PROJECT_DIR$/maze.png" afterDir="false" />

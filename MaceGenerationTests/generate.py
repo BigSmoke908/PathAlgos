@@ -116,9 +116,20 @@ def generate(x, y):
     return maze
 
 
+# removes random walls from the mace
+def erode(maze):
+    for row in maze:
+        for point in range(len(row)):
+            if row[point] == 0:
+                if random.randrange(0, 3) == 0:
+                    row[point] = 1
+    return maze
+
+
 if __name__ == '__main__':
     begin = time.time()
-    maze = generate(200, 200)
+    maze = generate(40, 40)
+    maze.maze = erode(maze.maze)
     maze.picture('maze.png')
     maze.save('maze.json')
     print(time.time() - begin)

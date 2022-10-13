@@ -48,7 +48,7 @@ class Solver:
                     # neighbour on the map?
                     if n[0] in range(len(costmap[0])) and n[1] in range(len(costmap)):
                         if i != 0 or j != 0:  # actually a new point
-                            if n[0] != source[0] or n[1] != source[1]:  # dont calculate for the start
+                            if n[0] != source[0] or n[1] != source[1]:  # dont calculate for the source
                                 if self.maze[n[1]][n[0]] != 0:
                                     costmap[n[1]][n[0]] = min(costmap[pointer[1]][pointer[0]] + self.dist(*n, *pointer) + self.dist(*n, *destination), costmap[n[1]][n[0]])
 
@@ -119,7 +119,7 @@ storage.load('maze.json')
 maze = storage.maze
 solver = Solver(maze)
 Source = [0, 0]
-dest = [0, 398]
+dest = [78, 78]
 # PATH = solver.astar(Source, dest)
 PATH = solver.dfs(Source, dest)
 for point in PATH:
