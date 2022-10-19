@@ -5,3 +5,10 @@
 5. https://www.youtube.com/watch?v=X3x7BlLgS-4  Dane Perry Svendsen, Algorythms Comparison
 6. https://www.youtube.com/watch?v=6kv5HKPB1XU  Turbo_Egg, MazeGeneration Algorythms
 7. https://www.youtube.com/watch?v=rop0W4QDOUI  Computerphile, einen Lösungsansatz erklärt + ein paar Optimierungen
+
+
+
+Images -> Video
+- in DavinciResolve den Ordner bei MediaPool reinziehen -> ist automatisch dann ein Video
+- letzten Frame manuell als Bild importieren + kurz länger anzeigen
+- exportieren
