@@ -113,10 +113,32 @@ class Solver:
         return path
 
 
+class BFSSolver(Solver):
+    # takes the entire maze -> removes all unnecessary points and only saves the
+    # junctions + their distance to the next junctions (convertion helpful for solving  BFS)
+
+    def __init__(self, m):
+        super().__init__(m)
+        self.nodes = []
+        self.transform_maze()
+
+    def transform_maze(self):
+        # Node Structure: {pos: [x, y], neighbours: [{pos: [x, y], direction: 'u'/'r'/'d'/'l', d: distance}]}
+        # TODO: die eigentliche Arbeit irgendwann in 2 Jahren dann auch noch machen :)
+        for y in range(len(self.maze)):
+            for x in range(len(self.maze[0])):
+
+        print('die Funktion funktioniert schon voll gut :)')
+
+
 begin = time.time()
 storage = Maze(5, 5)
 storage.load('maze.json')
 maze = storage.maze
+test = BFSSolver(maze)
+test.test()
+print(test.p(0, 0))
+'''
 solver = Solver(maze)
 Source = [0, 0]
 dest = [78, 78]
@@ -128,3 +150,4 @@ storage.maze[Source[1]][Source[0]] = 2
 storage.maze[dest[1]][dest[0]] = 2
 storage.picture('solved.png')
 print(time.time() - begin)
+'''
