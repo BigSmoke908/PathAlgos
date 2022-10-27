@@ -7,15 +7,9 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="645f5510-384a-4017-a5fc-b57f7972d52b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../rustsolver/backup.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MaceGenerationTests/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MaceGenerationTests/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MaceGenerationTests/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/../MaceGenerationTests/generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MaceGenerationTests/maze.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MaceGenerationTests/maze.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MaceGenerationTests/maze.png" beforeDir="false" afterPath="$PROJECT_DIR$/../MaceGenerationTests/maze.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MaceGenerationTests/solve.py" beforeDir="false" afterPath="$PROJECT_DIR$/../MaceGenerationTests/solve.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MaceGenerationTests/solvedbyAStar.png" beforeDir="false" afterPath="$PROJECT_DIR$/../MaceGenerationTests/solvedbyAStar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MaceGenerationTests/solvedbyDFS.png" beforeDir="false" afterPath="$PROJECT_DIR$/../MaceGenerationTests/solvedbyDFS.png" afterDir="false" />
+    <list default="true" id="b3cb9625-3e09-40bc-97d4-6206928603f4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../MaceGenerationTests/Generated.mov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +20,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MacroExpansionManager">
-    <option name="directoryName" value="skd8e4z7" />
+    <option name="directoryName" value="32ku8rlw" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2GP4SN6Ao0ywYeoW5TU6sT8zlBi" />
+  <component name="ProjectId" id="2GiqLnZFE5XO48Ine5VZC3sLO3h" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -69,11 +63,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="645f5510-384a-4017-a5fc-b57f7972d52b" name="Changes" comment="" />
-      <created>1666276886572</created>
+      <changelist id="b3cb9625-3e09-40bc-97d4-6206928603f4" name="Changes" comment="" />
+      <created>1666881701079</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1666276886572</updated>
+      <updated>1666881701079</updated>
     </task>
     <servers />
   </component>
