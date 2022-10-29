@@ -12,7 +12,6 @@ struct Buffer {
 
 impl Buffer{
     fn funnyfunc(&self){
-        println!("Yathzee");
         println!("{}", self.maze[0][0]);
     }
 }

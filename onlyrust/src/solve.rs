@@ -2,6 +2,7 @@ use std::fs;
 use std::fs::File;
 use std::io::prelude::*;
 use serde::{Deserialize, Serialize};
+use serde_json;
 
 
 #[derive(Deserialize, Serialize)]
@@ -9,6 +10,7 @@ struct Buffer {
     maze: Vec<Vec<i32>>
 }
 
+#[derive(Clone)]
 struct Maze {
     m: Vec<Vec<i32>>,
     filepath: String
@@ -20,9 +22,9 @@ impl Maze {
         self.m = data.maze;
     }
 
-    fn savemaze(&self, maze: Vec<Vec<i32>>){
-        let newmaze: Buffer = Buffer{maze: self.m};
-        let data: String = serde_json::to_string(&newmaze).unwrap();
+    fn savemaze(&self){
+        let new: Buffer = Buffer{maze: self.clone().m};
+        let data: String = serde_json::to_string(&new).unwrap();
         fs::write(&self.filepath, data).expect("Unable to write file");
     }
 
@@ -45,5 +47,5 @@ pub fn main(){
         }
     }
     lab.filepath = "mazes/newmaze.json".to_string();
-    lab.savemaze(lab.m);
+    lab.savemaze();
 }
