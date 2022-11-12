@@ -40,7 +40,7 @@ class Maze:
             val = self.corridor
         self.maze[2 * y][2 * x] = val
 
-    # connects 2 points -> sets them and the connection in between to a value
+    # connects 2 points -> sets them and the connection in between to be walkable
     def c(self, x1, y1, x2, y2, val=None):
         if val is None:
             val = self.corridor
